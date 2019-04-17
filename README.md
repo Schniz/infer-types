@@ -33,7 +33,7 @@ apply("hello", /** @export string => number */ x => x.length);
 type User = { name: string };
 const user: User = { name: "Gal" };
 
-apply(user, /** @export string => number */ x => x.name);
+apply(user, /** @export User => number */ x => x.name);
 ```
 
 And in our testing framework of choice:

@@ -10,6 +10,23 @@ This is a tool to test that the types you expect TypeScript to infer are correct
 npm install --save-dev infer-types
 ```
 
+## How does it work?
+
+It works by compiling the input file with TypeScript and look for every `@export <name>` declaration:
+
+```ts
+/** @export some-name */
+const a = "hello";
+```
+
+The function returns an object, made from all the `<name>`s as keys, and types - as strings, as the object values, so in the previous example, the object would look like:
+
+```json
+{
+  "a": "string"
+}
+```
+
 ## Usage
 
 Let's say you have the following file:

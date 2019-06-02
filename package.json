@@ -2,12 +2,15 @@
   "name": "infer-types",
   "version": "0.0.0",
   "description": "Returns the exported inferred types from TypeScript",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build && npm run test",
     "test": "jest"
   },
   "files": [
-    "index.ts"
+    "index.js",
+    "index.d.ts"
   ],
   "keywords": [
     "typescript",

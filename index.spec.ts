@@ -11,6 +11,7 @@ test("exports types", () => {
     "generic inferred function": "(x: string) => number",
     "generic inferred argument": "string",
     "generic inferred function custom": "(x: User) => string",
-    "generic inferred argument custom": "User"
+    "generic inferred argument custom": "User",
+    "deeply-nested": "{ \"problems\": { \"Diabetes\": { \"medications\": { \"medicationsClasses\": { \"className\": { \"associatedDrug\": { \"name\": string; \"dose\": string; \"strength\": string; }[]; \"associatedDrug#2\": { \"name\": string; \"dose\": string; \"strength\": string; }[]; }[]; \"className2\": { \"associatedDrug\": { \"name\": string; \"dose\": string; \"strength\": string; }[]; \"associatedDrug#2\": { \"name\": string; \"dose\": string; \"strength\": string; }[]; }[]; }[]; }[]; \"labs\": { \"missing_field\": string; }[]; }[]; \"Asthma\": {}[]; }[]; }",
   })
 });

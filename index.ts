@@ -27,7 +27,9 @@ export function getTypes(filepath: string): Types {
     const exported = symbol.getJsDocTags().find(x => x.name === "export");
     if (!exported || !exported.text) return;
     exportedTypes[exported.text] = checker.typeToString(
-      checker.getTypeOfSymbolAtLocation(symbol, node)
+      checker.getTypeOfSymbolAtLocation(symbol, node),
+      undefined,
+      ts.TypeFormatFlags.NoTruncation
     );
   }
 }

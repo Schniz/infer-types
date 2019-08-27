@@ -1,6 +1,6 @@
 {
   "name": "infer-types",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Returns the exported inferred types from TypeScript",
   "main": "index.js",
   "scripts": {
